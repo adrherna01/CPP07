@@ -1,14 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.cpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrherna <adrherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 11:07:12 by adrherna          #+#    #+#             */
-/*   Updated: 2025/01/02 11:25:36 by adrherna         ###   ########.fr       */
+/*   Created: 2025/01/04 13:26:12 by adrherna          #+#    #+#             */
+/*   Updated: 2025/01/04 14:00:01 by adrherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Whatever.cpp"
+#include <iostream>
 
+template <typename T>
+
+void iter(T* array, int len, void(*func)(T&))
+{
+    for (int i = 0; i < len; i++)
+        func(array[i]);
+}
